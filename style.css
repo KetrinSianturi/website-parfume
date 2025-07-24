@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #1a1a1a; 
+    color: #f5f5f5;
+    animation: fadeInBody 1s ease-in;
+}
+
+/* Animasi masuk */
+@keyframes fadeInBody {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+header {
+    background-color: #111;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadeInHeader 1.2s ease-in;
+}
+
+@keyframes fadeInHeader {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+.logo span {
+    color: #c08497;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s;
+}
+nav ul li a:hover {
+    color: #c08497;
+}
+
+/* HERO Section */
+.hero {
+    background: linear-gradient(to right, #c08497, #3e1c5a);
+    background-size: 200% 200%;
+    animation: gradientShift 6s ease infinite;
+    text-align: center;
+    padding: 100px 20px;
+    animation: fadeInHero 1.5s ease-in;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeInHero {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #dddddd;
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: linear-gradient(to right, #c08497, #3e1c5a);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.4s ease;
+    margin-top: 20px;
+}
+.cta-btn:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(to right, #3e1c5a, #c08497);
+}
+
+/* COLLECTION */
+.collection {
+    padding: 60px 20px;
+    text-align: center;
+    animation: fadeInSection 1.5s ease-in;
+}
+
+@keyframes fadeInSection {
+    0% { opacity: 0; transform: translateY(40px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.collection h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #f9f9f9;
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    background-color: #222;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: fadeInProduct 1.8s ease;
+}
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(192, 132, 151, 0.3);
+}
+
+@keyframes fadeInProduct {
+    0% { opacity: 0; transform: scale(0.95); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+}
+
+.product-card h3 {
+    margin: 15px 0 5px;
+    color: #fff;
+}
+
+.product-card p {
+    font-size: 14px;
+    color: #bbb;
+    padding: 0 15px 15px;
+}
+
+footer {
+       background: linear-gradient(to right, #3e1c5a, #c08497);
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+    color: white;
+    animation: fadeInFooter 2s ease-in;
+}
+
+@keyframes fadeInFooter {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
